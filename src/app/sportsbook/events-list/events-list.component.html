@@ -1,0 +1,60 @@
+<ng-container *ngIf="events as events">
+  <table mat-table [dataSource]="events" class="mat-table">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="mat-header">Id</th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        {{ element.id }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teams">
+      <th mat-header-cell *matHeaderCellDef class="mat-header">
+        Inplay Betting
+      </th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        <div>{{ element.homeTeam }}</div>
+        <div>{{ element.awayTeam }}</div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="score">
+      <th mat-header-cell *matHeaderCellDef class="mat-header"></th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        <div>{{ element.homeScore }}</div>
+        <div>{{ element.awayScore }}</div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="home">
+      <th mat-header-cell *matHeaderCellDef class="mat-header"></th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        <button mat-stroked-button>{{ element.home }}</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="draw">
+      <th mat-header-cell *matHeaderCellDef class="mat-header"></th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        <button mat-stroked-button>{{ element.draw }}</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="away">
+      <th mat-header-cell *matHeaderCellDef class="mat-header"></th>
+      <td mat-cell *matCellDef="let element" class="mat-cell">
+        <button mat-stroked-button>{{ element.away }}</button>
+      </td>
+    </ng-container>
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="displayedColumns"
+      class="mat-header-row"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      class="mat-row"
+    ></tr>
+  </table>
+</ng-container>

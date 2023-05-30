@@ -1,0 +1,41 @@
+table {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-header {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.mat-cell {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  min-width: 70px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0c7cd5;
+}
+
+.mat-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.mat-row:hover {
+  background-color: #ebebeb;
+}
